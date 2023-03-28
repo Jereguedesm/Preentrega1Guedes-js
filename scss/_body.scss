@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    body{
+        min-width: fit-content;
+        max-width: 100%;
+        height: 100%;
+        background-color: $background-body;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,52 @@
+footer{
+    background-color: $background-footer;
+}
+.redes-container{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 10px;
+    ul{
+        li{
+        display: inline-block;
+        padding: 0;
+        margin: 0 5px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        a{
+        display: block;
+        padding: 10px 10px;
+        color: #ffffff;
+        line-height: 60px;
+        width: 60px;
+        font-size: 3rem;
+        }
+        }
+    }
+}
+.instagram{
+    background: $instagram;
+}
+.youtube{
+    background: $youtube;
+}
+.facebook{
+    background: $facebook
+}
+.whatsapp{
+    background: $whatsapp;
+}
+.author{
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin: 10px;
+}
+.ul-redes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "facebook youtube fa-instagram fa-whatsapp";
+    padding: 0;
+}
