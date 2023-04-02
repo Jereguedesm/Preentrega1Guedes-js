@@ -7,6 +7,12 @@
                 max-width: 40vw;
                 margin: auto;
             }
+            .calculadoraPresupuestos{
+                &:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
+                }
+            }
         }
     }
     .redes-container{

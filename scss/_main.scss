@@ -1,8 +1,39 @@
 main{
+    margin-top: 100px;
+    section{
+        .catalogo{
+            justify-content: center;
+            h4{
+                font-size: 3rem;
+                margin: auto;
+            }
+            table{
+                margin: auto;
+                thead{
+                    th{
+                        font-size: 2rem;
+                    }
+                }
+                tbody{
+                    td{
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
     div{
         img{
             width: 100%;
             height: auto;
+        }
+    }
+}
+section{
+    .listaMateriales{
+        margin: 15px 30px;
+        li{
+            font-size: 2rem;
         }
     }
 }

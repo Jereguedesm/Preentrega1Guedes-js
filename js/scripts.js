@@ -3,7 +3,7 @@ let PrecioMachimbrePVC = 6000
 let interes = 1.1
 let cuotas
 
-function login(){
+function calculadora(){
     alert("¡Bienvenid@ a la página web oficial de Matías Beitez construcciones! Aquí encontrará y tendrá acceso a todo nuestro catálogo.")
     alert("Solo por hoy, con su compra mayor a 100.000 pesos, 10% de descuento y hasta 12 cuotas sin interés en todos los materiales.")
     let busqueda = prompt("¿Qué es lo que busca? (Durlock/PVC)").toUpperCase()
@@ -61,10 +61,3 @@ function login(){
         alert("No contamos con dicho producto en nuestro catálogo")
     }
 }
-
-
-
-//let m2 = prompt("¿Cuántos metros cuadrados quiere?")
-
-
-login()

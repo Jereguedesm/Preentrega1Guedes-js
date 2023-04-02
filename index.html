@@ -4,19 +4,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/257b641cee.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/257b641cee.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/styles.css">
     <title>Matias Benítez</title>
 </head>
 <header>
-    <h1>MATIAS BENÍTEZ</h1>
-    <h2>Construcciones de PVC</h2>
+    <section>
+        <div>
+            <h1>MATIAS BENÍTEZ</h1>
+            <h2>Construcciones de PVC</h2>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a href="">Inicio</a>
+                </li>
+                <li>
+                    <a href="">Todo nuestro catálogo</a>
+                </li>
+                <li>
+                    <button id="calculadoraPresupuestos" onclick="calculadora()">Calculadora de presupuestos</button>
+                </li>
+            </ul>
+        </div>
+    </section>
 </header>
 <body>
     <main>
+        <section class="catalogo">
+            <h4>Nuestro inventario</h4>
+            <table>
+                <thead>
+                    <tr>
+                    <th>Elemento</th>
+                    <th>Precio Unitario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>Cielorrasos</td>
+                    <td>$1800</td>
+                    </tr>
+                    <tr>
+                    <td>Revestimientos de pared</td>
+                    <td>$2000</td>
+                    </tr>
+                    <tr>
+                    <td>Tabiques divisorios</td>
+                    <td>$2500</td>
+                    </tr>
+                    <tr>
+                    <td>Taparrollos y cajones</td>
+                    <td>$1950</td>
+                    </tr>
+                </tbody>
+                </table>
+        </section>
         <div class="imgHolder">
             <img src="./assets/img/UlOffers.jpeg" alt="">
             <img src="./assets/img/onlyQR.jpeg" alt="">

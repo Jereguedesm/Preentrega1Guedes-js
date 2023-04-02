@@ -19,22 +19,84 @@ html body {
 }
 
 header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
   background-color: #e7cfb0;
 }
-header h1 {
+header section {
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1000px auto;
+  grid-template-rows: 1fr;
+}
+header section div h1 {
   font-size: 4rem;
   margin: 5px 0px 5px 20px;
   font-weight: 500;
 }
-header h2 {
+header section div h2 {
   font-size: 2.5rem;
   margin: 5px 0px 5px 20px;
   font-weight: 500;
 }
+header section div ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+header section div ul li {
+  font-size: 2rem;
+  list-style-type: none;
+  margin: 40px auto;
+  transition: transform 0.2s ease-out;
+  padding: 3px;
+}
+header section div ul li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+}
+header section div ul li a {
+  text-decoration: none;
+  color: #000000;
+}
+header section div ul li button {
+  text-decoration: none;
+  background-color: #e7cfb0;
+  border: none;
+  font-size: 2rem;
+}
 
+main {
+  margin-top: 100px;
+}
+main section .catalogo {
+  justify-content: center;
+}
+main section .catalogo h4 {
+  font-size: 3rem;
+  margin: auto;
+}
+main section .catalogo table {
+  margin: auto;
+}
+main section .catalogo table thead th {
+  font-size: 2rem;
+}
+main section .catalogo table tbody td {
+  font-size: 2rem;
+}
 main div img {
   width: 100%;
   height: auto;
+}
+
+section .listaMateriales {
+  margin: 15px 30px;
+}
+section .listaMateriales li {
+  font-size: 2rem;
 }
 
 footer {
@@ -102,6 +164,10 @@ footer {
   main div img {
     max-width: 40vw;
     margin: auto;
+  }
+  main div .calculadoraPresupuestos:hover {
+    transform: scale(1.05);
+    cursor: pointer;
   }
   .redes-container ul li a {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
