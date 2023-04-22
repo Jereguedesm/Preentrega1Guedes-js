@@ -1,27 +1,5 @@
 main{
-    margin-top: 100px;
-    section{
-        .catalogo{
-            justify-content: center;
-            h4{
-                font-size: 3rem;
-                margin: auto;
-            }
-            table{
-                margin: auto;
-                thead{
-                    th{
-                        font-size: 2rem;
-                    }
-                }
-                tbody{
-                    td{
-                        font-size: 2rem;
-                    }
-                }
-            }
-        }
-    }
+    margin-top: 230px;
     div{
         img{
             width: 100%;
@@ -34,6 +12,45 @@ section{
         margin: 15px 30px;
         li{
             font-size: 2rem;
+        }
+    }
+}
+#calculadoraPresupuestos{
+    font-size: 3rem;
+    border-radius: 5px;
+    padding: 3px;
+    background-color: $background-header;
+    width: 20%;
+    margin: 100px 40% 0px 40%;
+    border: none;
+    &:hover{
+        transform: scale(1.02);
+    }
+}
+.catalogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $background-header;
+    border-radius: 5px;
+    width: 100%;
+    h4{
+        font-size: 2.5rem;
+        margin: auto;
+    }
+    table{
+        margin: auto;
+        thead{
+            th{
+                font-size: 1.7rem;
+                padding: 3px 5px;
+            }
+        }
+        tbody{
+            td{
+                font-size: 1.7rem;
+                padding: 3px 5px;
+            }
         }
     }
 }

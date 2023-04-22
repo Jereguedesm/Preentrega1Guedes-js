@@ -3,11 +3,9 @@ header{
     width: 100%;
     height: 100px;
     background-color: $background-header;
-    section{
-            height: 100px;
-            display: grid;
-            grid-template-columns: 1000px auto;
-            grid-template-rows: 1fr;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
         div{
             h1{
                 font-size: 4rem;
@@ -29,6 +27,8 @@ header{
                     margin: 40px auto;
                     transition: transform 0.2s ease-out;
                     padding: 3px;
+
+
                     &:hover{
                         transform: scale(1.03);
                         box-shadow: 0 0 5px rgba(0,0,0,0.2);
@@ -47,5 +47,7 @@ header{
                 }
             }
         }
-    }
+}
+.nsli{
+    text-decoration: underline 2px #804000;
 }
