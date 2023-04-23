@@ -35,8 +35,8 @@ function calculadora(){
             if (cuotas === 1){
                 interes = 1
             }
-            if(isNaN(cuotas) || cuotas !== 1 || 3 || 6 || 9 || 12){
-                alert("Por favor, ingrese un número de cuotas válido para realizar la operación (1/3/6/9/12).")
+            if (cuotas !== 1 || 3 || 6 || 9 || 12){
+                alert("Por favor, ingrese una cantidad de cuotas válida para continuar la operación (1/3/6/9/12).")
                 cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
             }
             preciofinal = preciofinal / cuotas * interes
@@ -72,8 +72,8 @@ function calculadora(){
             if (cuotas === 1){
                 interes = 1
             }
-            if(isNaN(cuotas) || cuotas !== 1 || 3 || 6 || 9 || 12){
-                alert("Por favor, ingrese un número de cuotas válido para realizar la operación (1/3/6/9/12).")
+            if (cuotas !== 1 || 3 || 6 || 9 || 12){
+                alert("Por favor, ingrese una cantidad de cuotas válida para continuar la operación (1/3/6/9/12).")
                 cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
             }
             preciofinal = preciofinal / cuotas * interes
@@ -109,8 +109,8 @@ function calculadora(){
             if (cuotas === 1){
                 interes = 1
             }
-            if(isNaN(cuotas) || cuotas !== 1 || 3 || 6 || 9 || 12){
-                alert("Por favor, ingrese un número de cuotas válido para realizar la operación (1/3/6/9/12).")
+            if (cuotas !== 1 || 3 || 6 || 9 || 12){
+                alert("Por favor, ingrese una cantidad de cuotas válida para continuar la operación (1/3/6/9/12).")
                 cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
             }
             preciofinal = preciofinal / cuotas * interes
@@ -146,8 +146,8 @@ function calculadora(){
             if (cuotas === 1){
                 interes = 1
             }
-            if(isNaN(cuotas) || cuotas !== 1 || 3 || 6 || 9 || 12){
-                alert("Por favor, ingrese un número de cuotas válido para realizar la operación (1/3/6/9/12).")
+            if (cuotas !== 1 || 3 || 6 || 9 || 12){
+                alert("Por favor, ingrese una cantidad de cuotas válida para continuar la operación (1/3/6/9/12).")
                 cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
             }
             preciofinal = preciofinal / cuotas * interes

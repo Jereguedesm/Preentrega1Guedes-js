@@ -1,5 +1,6 @@
 footer{
     background-color: $background-footer;
+    margin-top: 5px;
 }
 .redes-container{
     display: flex;
@@ -21,6 +22,10 @@ footer{
         line-height: 60px;
         width: 60px;
         font-size: 3rem;
+        border-radius: 5px;
+        img{
+            width: 30px;
+        }
         }
         }
     }
@@ -49,4 +54,13 @@ footer{
     grid-template-areas: 
     "facebook youtube fa-instagram fa-whatsapp";
     padding: 0;
+}
+.personal{
+    background-color: $grey;
+    padding: 3px;
+    border-radius: 5px;
+    &:visited{
+        text-decoration: none;
+        color: #ffffff;
+    }
 }

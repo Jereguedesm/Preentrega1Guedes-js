@@ -20,29 +20,19 @@ header{
             ul{
                 display: flex;
                 flex-direction: row;
-                justify-content: space-around;
+                justify-content: space-between;
                 li{
-                    font-size: 2rem;
+                    font-size: 1.7rem;
                     list-style-type: none;
                     margin: 40px auto;
                     transition: transform 0.2s ease-out;
                     padding: 3px;
-
-
-                    &:hover{
-                        transform: scale(1.03);
-                        box-shadow: 0 0 5px rgba(0,0,0,0.2);
-                        border-radius: 7px;
-                    }
+                    width: fit-content;
+                    
                     a{
                         text-decoration: none;
                         color: #000000;
-                    }
-                    button{
-                        text-decoration: none;
-                        background-color: $background-header;
-                        border: none;
-                        font-size: 2rem;
+                        padding: 3px;
                     }
                 }
             }
@@ -50,4 +40,8 @@ header{
 }
 .nsli{
     text-decoration: underline 2px #804000;
+}
+.ulHeader{
+    display: flex;
+    flex-direction: row;
 }

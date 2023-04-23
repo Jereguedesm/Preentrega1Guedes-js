@@ -9,8 +9,7 @@ html {
   font-family: "Roboto", sans-serif;
 }
 html body {
-  min-width: fit-content;
-  max-width: 100%;
+  max-width: 100vw;
   height: 100%;
   background-color: #fdf4eb;
   display: flex;
@@ -40,41 +39,44 @@ header div h2 {
 header div ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 header div ul li {
-  font-size: 2rem;
+  font-size: 1.7rem;
   list-style-type: none;
   margin: 40px auto;
   transition: transform 0.2s ease-out;
   padding: 3px;
-}
-header div ul li:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  border-radius: 7px;
+  width: fit-content;
 }
 header div ul li a {
   text-decoration: none;
   color: #000000;
-}
-header div ul li button {
-  text-decoration: none;
-  background-color: #e7cfb0;
-  border: none;
-  font-size: 2rem;
+  padding: 3px;
 }
 
 .nsli {
   text-decoration: underline 2px #804000;
 }
 
+.ulHeader {
+  display: flex;
+  flex-direction: row;
+}
+
 main {
   margin-top: 230px;
+  max-width: 100vw;
 }
-main div img {
-  width: 100%;
-  height: auto;
+main div {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+}
+main div h5 {
+  font-size: 2rem;
+  margin: 7px 3px 3px 5px;
+  font-weight: 400;
 }
 
 section .listaMateriales {
@@ -87,7 +89,7 @@ section .listaMateriales li {
 #calculadoraPresupuestos {
   font-size: 3rem;
   border-radius: 5px;
-  padding: 3px;
+  padding: 5px;
   background-color: #e7cfb0;
   width: 20%;
   margin: 100px 40% 0px 40%;
@@ -121,8 +123,16 @@ section .listaMateriales li {
   padding: 3px 5px;
 }
 
+.muestraTrabajo {
+  width: 100vw;
+  height: 320px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
 footer {
   background-color: #6b6c65;
+  margin-top: 5px;
 }
 
 .redes-container {
@@ -146,6 +156,10 @@ footer {
   line-height: 60px;
   width: 60px;
   font-size: 3rem;
+  border-radius: 5px;
+}
+.redes-container ul li a img {
+  width: 30px;
 }
 
 .instagram {
@@ -178,11 +192,33 @@ footer {
   padding: 0;
 }
 
+.personal {
+  background-color: #333;
+  padding: 3px;
+  border-radius: 5px;
+}
+.personal:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 @media only screen and (min-width: 768px) {
   header {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: 1fr;
+  }
+  header div ul {
+    display: flex;
+    flex-direction: row;
+  }
+  header div ul li {
+    font-size: 2.2rem;
+  }
+  header div ul li:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
   }
   main {
     margin-top: 120px;
@@ -190,9 +226,17 @@ footer {
   main div {
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    max-width: 100vw;
+  }
+  main div h4 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 20px auto;
   }
   main div img {
-    max-width: 40vw;
+    max-width: 35vw;
     margin: auto;
   }
   main div .calculadoraPresupuestos:hover {
@@ -203,6 +247,7 @@ footer {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
     transition: 0.2s;
     background: #333;
+    border-radius: 0;
   }
   .redes-container ul li a:hover {
     transform: translateY(-3px) scale(1.05);
