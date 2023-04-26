@@ -70,6 +70,9 @@ let confirmacion = confirm("El contenido actual del carrito es: " + JSON.stringi
 
 if (confirmacion) {
     let cuotas = parseInt(prompt("¿En cuántas cuotas desea realizar el pago?"))
+    while (![1, 3, 6, 9, 12].includes(cuotas)) {
+      cuotas = parseInt(prompt("Por favor, elija un número de cuotas válido (1/3/6/9/12)"))
+    }
     let montoCuota = totalConEnvioYDescuento / cuotas
     alert(`El monto total de cada cuota es de $${montoCuota.toFixed(2)}. El costo total del producto incluyendo el cargo por envío y el descuento aplicable es de $${totalConEnvioYDescuento.toFixed(2)}`)
     let segundaConfirmación = confirm("¿Desea continuar? (aceptar = si / cancelar = no)")
@@ -81,7 +84,6 @@ if (confirmacion) {
     }
     carrito = []
   } else {
-    alert("Su compra ha sido cancelada.")
+    alert("Su compra ha sido cancelada y el carrito vaciado.")
   }
-
 }
