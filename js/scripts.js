@@ -74,7 +74,7 @@ if (confirmacion) {
       cuotas = parseInt(prompt("Por favor, elija un número de cuotas válido (1/3/6/9/12)"))
     }
     let montoCuota = totalConEnvioYDescuento / cuotas
-    alert(`El monto total de cada cuota es de $${montoCuota.toFixed(2)}. El costo total del producto incluyendo el cargo por envío y el descuento aplicable es de $${totalConEnvioYDescuento.toFixed(2)}`)
+    alert(`El monto total de cada cuota es de $${montoCuota.toFixed(2)} El costo total del producto incluyendo el cargo por envío y el descuento aplicable es de $${totalConEnvioYDescuento.toFixed(2)}`)
     let segundaConfirmación = confirm("¿Desea continuar? (aceptar = si / cancelar = no)")
     if (segundaConfirmación) {
         alert("¡Gracias por su compra!")
