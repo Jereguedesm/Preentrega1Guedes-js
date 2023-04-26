@@ -20,13 +20,12 @@ section{
         }
     }
 }
-#calculadoraPresupuestos{
-    font-size: 3rem;
+.calculadoraPresupuestos{
+    font-size: 2.4rem;
     border-radius: 5px;
     padding: 5px;
     background-color: $background-header;
-    width: 20%;
-    margin: 100px 40% 0px 40%;
+    margin: 100px auto 0 auto;
     border: none;
     &:hover{
         transform: scale(1.02);
@@ -64,4 +63,13 @@ section{
     height: 320px;
     margin: 5px 0;
     border-radius: 5px;
+}
+.introduccion{
+    font-size: 1.6rem;
+    text-align: justify;
+    margin: 4px 10px;
+}
+.antesDespues{
+    margin: auto;
+    font-size: 2rem;
 }

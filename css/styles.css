@@ -86,16 +86,15 @@ section .listaMateriales li {
   font-size: 2rem;
 }
 
-#calculadoraPresupuestos {
-  font-size: 3rem;
+.calculadoraPresupuestos {
+  font-size: 2.4rem;
   border-radius: 5px;
   padding: 5px;
   background-color: #e7cfb0;
-  width: 20%;
-  margin: 100px 40% 0px 40%;
+  margin: 100px auto 0 auto;
   border: none;
 }
-#calculadoraPresupuestos:hover {
+.calculadoraPresupuestos:hover {
   transform: scale(1.02);
 }
 
@@ -128,6 +127,17 @@ section .listaMateriales li {
   height: 320px;
   margin: 5px 0;
   border-radius: 5px;
+}
+
+.introduccion {
+  font-size: 1.6rem;
+  text-align: justify;
+  margin: 4px 10px;
+}
+
+.antesDespues {
+  margin: auto;
+  font-size: 2rem;
 }
 
 footer {
@@ -266,12 +276,28 @@ footer {
     width: 30%;
     margin: 0 35% 0 35%;
   }
-}
-.calculadoraPresupuestos:hover {
-  cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-}
-
-.nsli:hover {
-  cursor: pointer;
+  .calculadoraPresupuestos {
+    width: 20%;
+    font-size: 4rem;
+  }
+  .calculadoraPresupuestos:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  .nsli:hover {
+    cursor: pointer;
+  }
+  .introduccion {
+    font-size: 2rem;
+    width: 60%;
+    margin: 15px auto;
+    padding: 7px;
+    border-radius: 20px;
+    background-color: #e7cfb0;
+  }
+  .antesDespues {
+    font-size: 3rem;
+    margin: 15px;
+    justify-self: center;
+  }
 }

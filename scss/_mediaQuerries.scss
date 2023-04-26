@@ -82,15 +82,30 @@
         width: 30%;
         margin: 0 35% 0 35%;
     }
-}
-.calculadoraPresupuestos{
-    &:hover{
-        cursor: pointer;
-        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    .calculadoraPresupuestos{
+        width: 20%;
+        font-size: 4rem;
+        &:hover{
+            cursor: pointer;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
     }
-}
-.nsli{
-    &:hover{
-        cursor: pointer;
+    .nsli{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .introduccion{
+        font-size: 2rem;
+        width: 60%;
+        margin: 15px auto;
+        padding: 7px;
+        border-radius: 20px;
+        background-color: $background-header;
+    }
+    .antesDespues{
+        font-size: 3rem;
+        margin: 15px;
+        justify-self: center;
     }
 }
