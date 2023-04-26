@@ -75,7 +75,8 @@ if (confirmacion) {
     let segundaConfirmación = confirm("¿Desea continuar? (aceptar = si / cancelar = no)")
     if (segundaConfirmación) {
         alert("¡Gracias por su compra!")
-    }else {
+    }
+    if (!segundaConfirmación) {
         alert("Su compra ha sido cancelada.")
     }
     carrito = []
