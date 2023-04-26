@@ -1,168 +1,78 @@
-let PrecioDurlock = 3000
-let PrecioMachimbrePVC = 400
-let PrecioEstructurasDeHierro = 1500
-let PrecioCielorrasos = 1000
-let interes = 1.1
-let cuotas
-let PrecioEnvio = 1564
-
-function ComingSoon(){
-    alert("¡Disponible pronto!")
-}
 function calculadora(){
-    alert("¡Bienvenid@ a la página web oficial de Matías Beitez construcciones! Aquí encontrará y tendrá acceso a todo nuestro catálogo.")
+    let carritoDeCompras = [];
+
+let salir = false;
+
+alert("¡Bienvenid@ a la página web oficial de Matías Beitez construcciones! Aquí encontrará y tendrá acceso a todo nuestro catálogo.")
     alert("Solo por hoy, con su compra mayor a 100.000 pesos, 10% de descuento y hasta 12 cuotas sin interés en todos los materiales.\nAdemás, envío gratis para toda compra superior a 50.000 pesos")
-    alert("Nuestro catálogo cuenta con:\nDurlock\nMachimbres de PVC\nEstructuras de hierro\nCielorrasos")
-    let busqueda = prompt("¿Qué es lo que busca? (Durlock/PVC/EstructurasDeHierro/Cielorrasos)").toUpperCase().replace(/\s+/g, '')
-    if (busqueda == "DURLOCK"){
-        alert("El precio del m2 de durlock es de 3000 pesos")
-        let cantidad = prompt("¿Cuántos metros cuadrados está buscando?")
-        preciofinal = PrecioDurlock * cantidad
-        if (preciofinal > 50000){
-            PrecioEnvio = 0
-        }
-        if (preciofinal > 100000){
-            preciofinal = preciofinal * 0.9
-            interes = 1
-        }
-        preciofinal + PrecioEnvio
-        alert("El precio final de su compra será de " + preciofinal.toFixed() + " (tenga en cuenta que el precio del envío de su pedido será de " + PrecioEnvio + " ).")
+    alert("Nuestro catálogo cuenta con:\nDurlock (3000)\nMachimbres de PVC (400)\nEstructuras de hierro (1500)\nCielorrasos (1000)")
 
-        continuar = prompt("¿Desea continuar con su compra? (sí/no)")
-        continuar = continuar.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        if(continuar === "si"){
-            cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
-            if (cuotas === 1){
-                interes = 1
-            }
-            if (cuotas !== 1 || 3 || 6 || 9 || 12){
-                alert("Por favor, ingrese una cantidad de cuotas válida para continuar la operación (1/3/6/9/12).")
-                cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
-            }
-            preciofinal = preciofinal / cuotas * interes
-            alert("El precio final por cuota será de " + preciofinal.toFixed())
-            confirmacion = prompt("¿Desea continuar con la operación? (sí/no)")
-            confirmacion = confirmacion.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-            if (confirmacion === "si"){
-                alert("¡Muchas gracias por su compra, vuelva pronto!")
-            }else{
-                alert("¡No hay problema! puede seguir navegando por nuestra página y realizar consultas cuando guste.")
-            }
-        }else{
-            alert("¡No hay problema! puede seguir navegando por nuestra página y realizar consultas cuando guste.")
-        }
-    }else if(busqueda == "PVC"){
-        alert("El precio del m2 de machimbre de PVC es de 400 pesos")
-        let cantidad = prompt("¿Cuántos metros cuadrados está buscando?")
-        preciofinal = PrecioMachimbrePVC * cantidad
-        if (preciofinal > 50000){
-            PrecioEnvio = 0
-        }
-        if (preciofinal > 100000){
-            preciofinal = preciofinal * 0.9
-            interes = 1
-        }
-        preciofinal + PrecioEnvio
-        alert("El precio final de su compra será de " + preciofinal.toFixed() + " (tenga en cuenta que el precio del envío de su pedido será de " + PrecioEnvio + " ).")
+while (!salir) {
+  let producto = prompt("¿Qué producto desea añadir al carrito?\n(Durlock/Machimbre de PVC/Estructuras De Hierro/Cielorrasos)\n(Escriba 'salir' para terminar o continuar al pago)");
 
-        continuar = prompt("¿Desea continuar con su compra? (sí/no)")
-        continuar = continuar.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        if(continuar === "si"){
-            cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
-            if (cuotas === 1){
-                interes = 1
-            }
-            if (cuotas !== 1 || 3 || 6 || 9 || 12){
-                alert("Por favor, ingrese una cantidad de cuotas válida para continuar la operación (1/3/6/9/12).")
-                cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
-            }
-            preciofinal = preciofinal / cuotas * interes
-            alert("El precio final por cuota será de " + preciofinal.toFixed())
-            confirmacion = prompt("¿Desea continuar con la operación? (sí/no)")
-            confirmacion = confirmacion.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-            if (confirmacion === "si"){
-                alert("¡Muchas gracias por su compra, vuelva pronto!")
-            }else{
-                alert("¡No hay problema! puede seguir navegando por nuestra página y realizar consultas cuando guste.")
-            }
-        }else{
-            alert("¡No hay problema! puede seguir navegando por nuestra página y realizar consultas cuando guste.")
-        }
-    }else if(busqueda == "ESTRUCTURASDEHIERRO"){
-        alert("El precio del metro de las estructuras de hierrro es de 1500 pesos")
-        let cantidad = prompt("¿Cuántos metros está buscando?")
-        preciofinal = PrecioEstructurasDeHierro * cantidad
-        if (preciofinal > 50000){
-            PrecioEnvio = 0
-        }
-        if (preciofinal > 100000){
-            preciofinal = preciofinal * 0.9
-            interes = 1
-        }
-        preciofinal + PrecioEnvio
-        alert("El precio final de su compra será de " + preciofinal.toFixed() + " (tenga en cuenta que el precio del envío de su pedido será de " + PrecioEnvio + " ).")
-
-        continuar = prompt("¿Desea continuar con su compra? (sí/no)")
-        continuar = continuar.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        if(continuar === "si"){
-            cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
-            if (cuotas === 1){
-                interes = 1
-            }
-            if (cuotas !== 1 || 3 || 6 || 9 || 12){
-                alert("Por favor, ingrese una cantidad de cuotas válida para continuar la operación (1/3/6/9/12).")
-                cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
-            }
-            preciofinal = preciofinal / cuotas * interes
-            alert("El precio final por cuota será de " + preciofinal.toFixed())
-            confirmacion = prompt("¿Desea continuar con la operación? (sí/no)")
-            confirmacion = confirmacion.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-            if (confirmacion === "si"){
-                alert("¡Muchas gracias por su compra, vuelva pronto!")
-            }else{
-                alert("¡No hay problema! puede seguir navegando por nuestra página y realizar consultas cuando guste.")
-            }
-        }else{
-            alert("¡No hay problema! puede seguir navegando por nuestra página y realizar consultas cuando guste.")
-        }
-    }else if(busqueda == "CIELORRASOS"){
-        alert("El precio del m2 de Cielorraso de cualquier tipo es de 1000 pesos")
-        let cantidad = prompt("¿Cuántos metros cuadrados está buscando?")
-        preciofinal = PrecioCielorrasos * cantidad
-        if (preciofinal > 50000){
-            PrecioEnvio = 0
-        }
-        if (preciofinal > 100000){
-            preciofinal = preciofinal * 0.9
-            interes = 1
-        }
-        preciofinal + PrecioEnvio
-        alert("El precio final de su compra será de " + preciofinal.toFixed() + " (tenga en cuenta que el precio del envío de su pedido será de " + PrecioEnvio + " ).")
-
-        continuar = prompt("¿Desea continuar con su compra? (sí/no)")
-        continuar = continuar.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        if(continuar === "si"){
-            cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
-            if (cuotas === 1){
-                interes = 1
-            }
-            if (cuotas !== 1 || 3 || 6 || 9 || 12){
-                alert("Por favor, ingrese una cantidad de cuotas válida para continuar la operación (1/3/6/9/12).")
-                cuotas = prompt("¿En cuantas cuotas desea realizar su compra? (1/3/6/9/12)")
-            }
-            preciofinal = preciofinal / cuotas * interes
-            alert("El precio final por cuota será de " + preciofinal.toFixed())
-            confirmacion = prompt("¿Desea continuar con la operación? (sí/no)")
-            confirmacion = confirmacion.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-            if (confirmacion === "si"){
-                alert("¡Muchas gracias por su compra, vuelva pronto!")
-            }else{
-                alert("¡No hay problema! puede seguir navegando por nuestra página y realizar consultas cuando guste.")
-            }
-        }else{
-            alert("¡No hay problema! puede seguir navegando por nuestra página y realizar consultas cuando guste.")
-        }
-    }else{
-        alert("No contamos con dicho producto en nuestro catálogo")
+  if (producto.toLowerCase() === "salir") {
+    salir = true;
+  } else {
+    let precio;
+    if (producto === "durlock") {
+      precio = 3000;
+    } else if (producto === "machimbre de pvc") {
+      precio = 400;
+    } else if (producto === "estructuras de hierro") {
+      precio = 1500;
+    } else if (producto === "cielorrasos") {
+      precio = 1000;
+    } else {
+      alert("El producto ingresado no es válido.");
     }
+
+    if (precio) {
+        let cantidad = parseInt(prompt("¿Cuántas unidades desea agregar al carrito?"));
+        if (!isNaN(cantidad) && cantidad > 0) {
+          let total = precio * cantidad;
+          carritoDeCompras.push({producto: producto, precio: total});
+          alert("Se ha añadido al carrito: " + producto + " - Precio total: $" + total);
+        } else {
+          alert("La cantidad ingresada no es válida.");
+        }
+      }
+  
+  }
+}
+
+if (carritoDeCompras.length === 0) {
+    alert("El carrito de compras está vacío, no se cobrará envío");
+  }
+
+let totalCarrito = 0;
+for (let i = 0; i < carritoDeCompras.length; i++) {
+  totalCarrito += carritoDeCompras[i].precio;
+}
+
+let cargoEnvio = 0;
+if (totalCarrito < 50000) {
+  cargoEnvio = 1564;
+}
+
+if (totalCarrito === 0){
+    cargoEnvio = 0
+}
+
+let descuento = 0;
+if (totalCarrito > 100000) {
+  descuento = totalCarrito * 0.1;
+}
+
+let totalConEnvioYDescuento = totalCarrito + cargoEnvio - descuento;
+
+let confirmacion = confirm("El contenido actual del carrito es: " + JSON.stringify(carritoDeCompras) + "\nTotal del carrito: $" + totalCarrito + "\nCargo extra por envío: $" + cargoEnvio + "\nDescuento aplicado: $" + descuento + "\nTotal con envío y descuento: $" + totalConEnvioYDescuento + "\n¿Desea confirmar el pago? (aceptar = si / cancelar = no)");
+
+
+if (confirmacion) {
+  alert("El pago ha sido confirmado. ¡Gracias por su compra!");
+} else {
+  alert("El pago ha sido cancelado. El carrito se vaciará.");
+  carritoDeCompras = [];
+}
+
 }
