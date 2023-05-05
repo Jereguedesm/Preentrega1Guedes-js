@@ -1,11 +1,10 @@
 function calculadora(){
-    let carritoDeCompras = []
-
-let salir = false
+  let carritoDeCompras = []
+  let salir = false;
 
 alert("¡Bienvenid@ a la página web oficial de Matías Beitez construcciones! Aquí encontrará y tendrá acceso a todo nuestro catálogo.")
-    alert("Solo por hoy, con su compra mayor a 100.000 pesos, 10% de descuento y hasta 12 cuotas sin interés en todos los materiales.\nAdemás, envío gratis para toda compra superior a 50.000 pesos")
-    alert("Nuestro catálogo cuenta con:\nDurlock (3000)\nMachimbres de PVC (400)\nEstructuras de hierro (1500)\nCielorrasos (1000)")
+alert("Solo por hoy, con su compra mayor a 100.000 pesos, 10% de descuento y hasta 12 cuotas sin interés en todos los materiales.\nAdemás, envío gratis para toda compra superior a 50.000 pesos")
+alert("Nuestro catálogo cuenta con:\nDurlock (3000)\nMachimbres de PVC (400)\nEstructuras de hierro (1500)\nCielorrasos (1000)")
 
 while (!salir) {
   let producto = prompt("¿Qué producto desea añadir al carrito?\n(Durlock/Machimbre de PVC/Estructuras De Hierro/Cielorrasos)\n(Escriba 'salir' para terminar o continuar al pago)")
@@ -40,10 +39,10 @@ while (!salir) {
   }
 }
 
-if (carritoDeCompras.length === 0) {
+/*if (carritoDeCompras.length === 0) {
     alert("El carrito de compras está vacío, no se cobrará envío")
-  }
-
+  }*/
+carritoDeCompras.lenght === 0 && alert("El carrito de compras está vacío, no se cobrará envío")
 let totalCarrito = 0
 for (let i = 0; i < carritoDeCompras.length; i++) {
   totalCarrito += carritoDeCompras[i].precio
