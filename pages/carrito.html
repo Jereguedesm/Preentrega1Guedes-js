@@ -21,12 +21,6 @@
                 <li>
                     <a href="../index.html">Inicio</a>
                 </li>
-                <li>
-                    <a href="./catalogo.html">Catálogo</a>
-                </li>
-                <li>
-                    <a href="./calculadora.html">Calculadora de presupuestos</a>
-                </li>
                 <li class="nsli">
                     Carrito
                 </li>
@@ -35,10 +29,91 @@
 </header>
 <body>
     <main>
-        <h4>Tu carrito se compone de:</h4>
-        <p>
+        <section>
+            <div>
+                <p class="welcome">
+                    ¡Bienvenido a la página web oficial de Matías Beitez construcciones! Aquí encontrará y tendrá acceso a todo nuestro catálogo. <br>
+                    Solo por hoy, envío gratis para toda compra superior a 50.000 pesos (caso contrario, se cobrará un coste de envío de 1564 pesos) <br>
+                    Nuestro catálogo cuenta con:<br>
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="cart">
 
-        </p>
+                <div class="item">
+
+                  <h3>Machimbres de PVC</h3>
+
+                  <p>Precio: $400</p>
+
+                  <div class="quantity">
+
+                    <button class="minus-btn" type="button" name="button">-</button>
+
+                    <input type="text" name="name" value="0">
+
+                    <button class="plus-btn" type="button" name="button">+</button>
+
+                  </div>
+
+                </div>
+                <div class="item">
+                  <h3>Durlock </h3>
+                  <p>Precio: $3000</p>
+                  <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">-</button>
+                    <input type="text" name="name" value="0">
+                    <button class="plus-btn" type="button" name="button">+</button>
+                  </div>
+                </div>
+                <div class="item">
+                  <h3>Cielorrasos </h3>
+                  <p>Precio: $1000</p>
+                  <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">-</button>
+                    <input type="text" name="name" value="0">
+                    <button class="plus-btn" type="button" name="button">+</button>
+                  </div>
+                </div>
+                <div class="item">
+                  <h3>Estructuras de hierro </h3>
+                  <p>Precio: $1500</p>
+                  <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">-</button>
+                    <input type="text" name="name" value="0">
+                    <button class="plus-btn" type="button" name="button">+</button>
+                  </div>
+                </div>
+                <div class="item">
+                    <h3>Tabiques divisorios </h3>
+                    <p>Precio: $2500</p>
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">-</button>
+                      <input type="text" name="name" value="0">
+                      <button class="plus-btn" type="button" name="button">+</button>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <h3>Taparrollos y cajones </h3>
+                    <p>Precio: $1950</p>
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">-</button>
+                      <input type="text" name="name" value="0">
+                      <button class="plus-btn" type="button" name="button">+</button>
+                    </div>
+                  </div>
+              </div>
+              <div class="cart">
+                <div class="total">
+                  <h3>Total: </h3>
+                  <p id="total-price">$0</p>
+                </div>
+              </div>
+              <div>
+                <button id="confirmarCompra">Confirmar compra</button>
+              </div>
+        </section>
     </main>
 </body>
 <footer>
