@@ -52,18 +52,31 @@ function updateTotal() {
     let totalPriceElement = document.querySelector("#total-price")
     totalPriceElement.textContent = "$" + totalPrice
 }
-let confirmButton = document.querySelector('#confirmarCompra')
-    confirmButton.addEventListener('click', function() {
-    let cuotas = parseInt(prompt("¿En cuántas cuotas desea realizar el pago? (1/3/6/9/12)"))
-    while (![1, 3, 6, 9, 12].includes(cuotas)) {
-    cuotas = parseInt(prompt("Por favor, elija un número de cuotas válido (1/3/6/9/12)"))
-    }
-    let montoCuota = totalPrice / cuotas
-    alert(`El monto total de cada cuota es de $${montoCuota.toFixed(2)}`)
-    let segundaConfirmación = confirm("¿Desea continuar? (aceptar = si / cancelar = no)")
-    if (segundaConfirmación) {
-        alert("¡Gracias por su compra!")
-    }
-    if (!segundaConfirmación) {
-        alert("Su compra ha sido cancelada.")
-    }})
+
+
+let cuotasInput = document.querySelector('#cuotas')
+let calcularCuotasButton = document.querySelector('#calcularCuotas')
+let montoCuotaElement = document.querySelector('#montoCuota')
+
+
+
+calcularCuotasButton.addEventListener('click', function() {
+let cuotas = parseInt(cuotasInput.value)
+if (![1, 3, 6, 9, 12].includes(cuotas)) {
+    alert("Por favor, elija un número de cuotas válido (1/3/6/9/12)")
+    return
+}
+let montoCuota = totalPrice / cuotas
+montoCuotaElement.textContent = `El monto total de cada cuota es de $${montoCuota.toFixed(2)}`})
+
+const mensajeCompraElement = document.querySelector('#mensajeCompra')
+const confirmarCompraSiButton = document.querySelector('#confirmarCompraSi')
+const confirmarCompraNoButton = document.querySelector('#confirmarCompraNo')
+
+confirmarCompraSiButton.addEventListener('click', function() {
+mensajeCompraElement.textContent = "¡Gracias por su compra!"
+})
+
+confirmarCompraNoButton.addEventListener('click', function() {
+mensajeCompraElement.textContent = "Su compra ha sido cancelada."
+})

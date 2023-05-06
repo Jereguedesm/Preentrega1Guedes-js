@@ -89,29 +89,28 @@ p{
 .cart {
     display: flex;
     flex-direction: column;
-  }
-  
-  .item {
+}
+.item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-  }
-  
-  .quantity {
+}
+
+.quantity {
     display: flex;
     align-items: center;
-  }
-  
-  input[type="text"] {
+}
+
+input[type="text"] {
     width: 30px;
     text-align: center;
     border: none;
     font-size: 2rem;
     font-weight: bold;
-  }
-  
-  .minus-btn, .plus-btn {
+}
+
+.minus-btn, .plus-btn {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -120,20 +119,20 @@ p{
     font-size: 2.2rem;
     font-weight: bold;
     cursor: pointer;
-  }
-  
-  .plus-btn {
+}
+
+.plus-btn {
     margin-left: 10px;
-  }
-  
-  .minus-btn {
+}
+
+.minus-btn {
     margin-right: 10px;
-  }
-  
-  .plus-btn:hover,
-  .minus-btn:hover {
+}
+
+.plus-btn:hover,
+.minus-btn:hover {
     background-color: #e6e6e6;
-  }
+}
 #confirmarCompra{
     font-size: 2rem;
     margin: 10px;
