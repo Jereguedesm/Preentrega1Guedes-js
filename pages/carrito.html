@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/257b641cee.js" crossorigin="anonymous"></script>
-    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel="stylesheet" href="../css/styles.css">
     <title>Matias Benítez</title>
@@ -25,6 +25,9 @@
                 <li class="nsli">
                     Carrito
                 </li>
+                <li>
+                  <a href="./usuario.html">Usuario</a>
+                </li>
             </ul>
         </div>
 </header>
@@ -41,23 +44,14 @@
         </section>
         <section>
             <div class="cart">
-
                 <div class="item">
-
                   <h3>Machimbres de PVC</h3>
-
                   <p>Precio: $400</p>
-
                   <div class="quantity">
-
                     <button class="minus-btn" type="button" name="button">-</button>
-
                     <input type="text" name="name" value="0">
-
                     <button class="plus-btn" type="button" name="button">+</button>
-
                   </div>
-
                 </div>
                 <div class="item">
                   <h3>Durlock </h3>
@@ -111,11 +105,6 @@
                   <p id="total-price">$0</p>
                 </div>
               </div>
-              <div>
-                <button id="confirmarCompra">Confirmar compra</button>
-            </div>
-
-            <section>
                 <div>
                     <label for="cuotas">¿En cuántas cuotas desea realizar el pago? (1/3/6/9/12)</label>
                     <input type="number" id="cuotas" name="cuotas" min="1" max="12" required>
@@ -127,20 +116,9 @@
                     <label>¿Desea continuar?</label>
                     <button id="confirmarCompraSi">Sí</button>
                     <button id="confirmarCompraNo">No</button>
-                    <p id="mensajeCompra"></p>
                 </div>
-                <div>
-                  <!-- Botón para guardar el carrito en el localstorage -->
-                  <button id="guardarCarrito">Guardar carrito</button>
-                  <!-- Botón para leer el carrito guardado en el localstorage -->
-                  <button id="leerCarrito">Leer carrito</button>
-                </div>
-                
-                
-
-                
-            </section>
         </section>
+        
     </main>
 </body>
 <footer>

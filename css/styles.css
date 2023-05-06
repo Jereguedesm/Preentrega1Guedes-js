@@ -212,6 +212,41 @@ input[type=text] {
   border: none;
 }
 
+.formHolder {
+  background-color: #e7cfb0;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+.formHolder label {
+  font-size: 2rem;
+  padding: 3px;
+  margin: 7px;
+  margin-bottom: 0px;
+}
+.formHolder input {
+  font-size: 2rem;
+  padding: 3px;
+  margin: 7px;
+  width: 20%;
+  border: solid #000000 1px;
+  border-radius: 5px;
+}
+.formHolder button {
+  font-size: 2rem;
+  padding: 3px;
+  margin: 7px;
+  width: 15%;
+  border: solid #000000 1px;
+  border-radius: 5px;
+}
+.formHolder button:hover {
+  transform: scale(1.01);
+  background-color: #6b6c65;
+  cursor: pointer;
+}
+
 footer {
   background-color: #6b6c65;
   margin-top: 5px;

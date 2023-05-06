@@ -141,3 +141,37 @@ input[type="text"] {
     border-radius: 10px;
     border: none;
 }
+.formHolder{
+    background-color: $background-header;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    label{
+        font-size: 2rem;
+        padding: 3px;
+        margin: 7px;
+        margin-bottom: 0px;
+    }
+    input{
+        font-size: 2rem;
+        padding: 3px;
+        margin: 7px;
+        width: 20%;
+        border: solid #000000 1px;
+        border-radius: 5px;
+    }
+    button{
+        font-size: 2rem;
+        padding: 3px;
+        margin: 7px;
+        width: 15%;
+        border: solid #000000 1px;
+        border-radius: 5px;
+        &:hover{
+            transform: scale(1.01);
+            background-color: $background-footer;
+            cursor: pointer;
+        }
+    }
+}

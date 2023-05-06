@@ -57,22 +57,76 @@ let montoCuotaElement = document.querySelector('#montoCuota')
 calcularCuotasButton.addEventListener('click', function() {
 let cuotas = parseInt(cuotasInput.value)
 if (![1, 3, 6, 9, 12].includes(cuotas)) {
-    alert("Por favor, elija un número de cuotas válido (1/3/6/9/12)")
+
+  Swal.fire({
+    title: 'Cuotas inválidas',
+    text: 'Por favor, elija un monto de cuotas válido (1/3/6/9/12).',
+    icon: 'error',
+    confirmButtonText: 'Aceptar'
+  })
     return
 }
 let montoCuota = totalPrice / cuotas
 montoCuotaElement.textContent = `El monto total de cada cuota es de $${montoCuota.toFixed(2)}`})
-const mensajeCompraElement = document.querySelector('#mensajeCompra')
-const confirmarCompraSiButton = document.querySelector('#confirmarCompraSi')
-const confirmarCompraNoButton = document.querySelector('#confirmarCompraNo')
-confirmarCompraSiButton.addEventListener('click', function() {
-mensajeCompraElement.textContent = "¡Gracias por su compra!"
+let compraConfirmada = document.getElementById("confirmarCompraSi")
+compraConfirmada.addEventListener("click", function(){
+  Swal.fire({
+    title: 'Compra realizada',
+    text: '¡Gracias por su compra!',
+    icon: 'succsess',
+    confirmButtonText: 'Aceptar'
+  })
 })
-confirmarCompraNoButton.addEventListener('click', function() {
-mensajeCompraElement.textContent = "Su compra ha sido cancelada."
+
+let compraCancelada = document.getElementById("confirmarCompraNo")
+compraCancelada.addEventListener("click", function(){
+  Swal.fire({
+    title: 'Compra cancelada',
+    text: 'Su compra ha sido cancelada',
+    icon: 'error',
+    confirmButtonText: 'Aceptar'
+  })
 })
 
+/*formulario de datos de ususario*/
+function guardarDatos() {
+  var nombre = document.getElementById("nombre").value
+  var apellido = document.getElementById("apellido").value
+  var email = document.getElementById("email").value
+  var edad = document.getElementById("edad").value
 
+  localStorage.setItem("nombre", nombre)
+  localStorage.setItem("apellido", apellido)
+  localStorage.setItem("email", email)
+  localStorage.setItem("edad", edad)
 
+  Swal.fire({
+    title: 'Datos guardados',
+    text: 'Se han guardado correctamente los datos de usuario ingresados',
+    icon: 'success',
+    confirmButtonText: 'Aceptar'
+  })
+}
 
+function mostrarDatos() {
+  var nombre = localStorage.getItem("nombre")
+  var apellido = localStorage.getItem("apellido")
+  var email = localStorage.getItem("email")
+  var edad = localStorage.getItem("edad")
+  Swal.fire({
+    title: 'Datos de usuario',
+    text: 'Los datos de usuario registrados son:' + ("\nNombre: " + nombre + "\nApellido: " + apellido + "\nEmail: " + email + "\nEdad: " + edad),
+    icon: 'info',
+    confirmButtonText: 'Aceptar'
+  })
+}
 
+function limpiarDatos() {
+  localStorage.clear()
+  Swal.fire({
+    title: 'Datos eliminados',
+    text: 'Se han borrado correctamente los datos de usuario guardados',
+    icon: 'error',
+    confirmButtonText: 'Aceptar'
+  })
+}

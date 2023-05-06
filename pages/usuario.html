@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>Matias Benítez</title>
 </head>
 <header>
@@ -20,14 +20,14 @@
     </div>
     <div>
         <ul class="ulHeader">
+            <li>
+                <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+                <a href="../pages/carrito.html">Carrito</a>
+            </li>
             <li class="nsli">
-                Inicio
-            </li>
-            <li>
-                <a href="./pages/carrito.html">Carrito</a>
-            </li>
-            <li>
-                <a href="./pages/usuario.html">Usuario</a>
+                <a href="./usuario.html">Usuario</a>
             </li>
         </ul>
         
@@ -36,23 +36,25 @@
 <body>
     <main>
         <section>
-            <p class="introduccion">
-                Bienvenidos a Matías Benítez - construcciones en PVC. Somos una empresa dedicada a la venta de materiales de construcción en PVC y a la realización de instalaciones en este tipo de material. Contamos con una amplia gama de productos de alta calidad para satisfacer las necesidades de nuestros clientes en sus proyectos de construcción. Nuestro compromiso es brindar un servicio de excelencia y asesoramiento profesional para asegurarnos de que tu proyecto sea un éxito.
-            </p>
-        </section>
-        <section>
-            <div>
-                <h4 class="antesDespues">Antes/Después</h4>
+            <div class="formHolder">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre"><br>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido"><br>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email"><br>
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad"><br>
+
+                <button onclick="guardarDatos()">Guardar datos</button>
+                <button onclick="mostrarDatos()">Consultar datos de usuario</button>
+                <button onclick="limpiarDatos()">Limpiar datos</button>
+
             </div>
-            <div class="imgHolder" id="#top">
-                <img src="./assets/img/techoUnoA.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
-                <img src="./assets/img/techoUnoB.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
-            </div>
-            <div class="imgHolder" id="#top">
-                <img src="./assets/img/techoDosA.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
-                <img src="./assets/img/techoDosB.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
-            </div>
-        </section>
+            </section>
     </main>
 </body>
 <footer>
@@ -83,5 +85,5 @@
         <p>Creación de la página: <a href="https://www.instagram.com/jereguedesm/" target="_blank" class="personal">@jereguedesm</a> / 1133290716 / jeremiasguedes04@gmail.com</p>
     </div>
     </footer>
-    <script src="./js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </html>
