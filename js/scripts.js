@@ -2,7 +2,6 @@
 let plusButtons = document.querySelectorAll(".plus-btn")
 let minusButtons = document.querySelectorAll(".minus-btn")
 let totalPrice = 0
-
 // Agregar un EventListener a cada botón de "Agregar"
 plusButtons.forEach(function(button) {
 button.addEventListener("click", function() {
@@ -14,7 +13,6 @@ button.addEventListener("click", function() {
     updateTotal()
 })
 })
-
 // Agregar un EventListener a cada botón de "Quitar"
 minusButtons.forEach(function(button) {
 button.addEventListener("click", function() {
@@ -47,18 +45,14 @@ function updateTotal() {
     }
     totalPrice = totalPrice + shippinFee
     })
-
     // Actualizar el precio total en la página
     let totalPriceElement = document.querySelector("#total-price")
     totalPriceElement.textContent = "$" + totalPrice
 }
 
-
 let cuotasInput = document.querySelector('#cuotas')
 let calcularCuotasButton = document.querySelector('#calcularCuotas')
 let montoCuotaElement = document.querySelector('#montoCuota')
-
-
 
 calcularCuotasButton.addEventListener('click', function() {
 let cuotas = parseInt(cuotasInput.value)
@@ -68,15 +62,17 @@ if (![1, 3, 6, 9, 12].includes(cuotas)) {
 }
 let montoCuota = totalPrice / cuotas
 montoCuotaElement.textContent = `El monto total de cada cuota es de $${montoCuota.toFixed(2)}`})
-
 const mensajeCompraElement = document.querySelector('#mensajeCompra')
 const confirmarCompraSiButton = document.querySelector('#confirmarCompraSi')
 const confirmarCompraNoButton = document.querySelector('#confirmarCompraNo')
-
 confirmarCompraSiButton.addEventListener('click', function() {
 mensajeCompraElement.textContent = "¡Gracias por su compra!"
 })
-
 confirmarCompraNoButton.addEventListener('click', function() {
 mensajeCompraElement.textContent = "Su compra ha sido cancelada."
 })
+
+
+
+
+
