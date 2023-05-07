@@ -90,10 +90,10 @@ compraCancelada.addEventListener("click", function(){
 
 /*formulario de datos de ususario*/
 function guardarDatos() {
-  var nombre = document.getElementById("nombre").value
-  var apellido = document.getElementById("apellido").value
-  var email = document.getElementById("email").value
-  var edad = document.getElementById("edad").value
+  let nombre = document.getElementById("nombre").value
+  let apellido = document.getElementById("apellido").value
+  let email = document.getElementById("email").value
+  let edad = document.getElementById("edad").value
 
   localStorage.setItem("nombre", nombre)
   localStorage.setItem("apellido", apellido)
@@ -109,10 +109,10 @@ function guardarDatos() {
 }
 
 function mostrarDatos() {
-  var nombre = localStorage.getItem("nombre")
-  var apellido = localStorage.getItem("apellido")
-  var email = localStorage.getItem("email")
-  var edad = localStorage.getItem("edad")
+  let nombre = localStorage.getItem("nombre")
+  let apellido = localStorage.getItem("apellido")
+  let email = localStorage.getItem("email")
+  let edad = localStorage.getItem("edad")
   Swal.fire({
     title: 'Datos de usuario',
     text: 'Los datos de usuario registrados son:' + ("\nNombre: " + nombre + "\nApellido: " + apellido + "\nEmail: " + email + "\nEdad: " + edad),
