@@ -55,25 +55,31 @@ let calcularCuotasButton = document.querySelector('#calcularCuotas')
 let montoCuotaElement = document.querySelector('#montoCuota')
 
 calcularCuotasButton.addEventListener('click', function() {
-let cuotas = parseInt(cuotasInput.value)
-if (![1, 3, 6, 9, 12].includes(cuotas)) {
+  let cuotas = parseInt(cuotasInput.value)
+  if (![1, 3, 6, 9, 12].includes(cuotas)) {
+    Swal.fire({
+      title: 'Cuotas inválidas',
+      text: 'Por favor, elija un monto de cuotas válido (1/3/6/9/12).',
+      icon: 'error',
+      confirmButtonText: 'Aceptar'
+    })
+    return
+  }
+  let montoCuota = totalPrice / cuotas
 
   Swal.fire({
-    title: 'Cuotas inválidas',
-    text: 'Por favor, elija un monto de cuotas válido (1/3/6/9/12).',
-    icon: 'error',
+    title: 'Monto cuotas',
+    text: `El monto total de cada cuota es de $${montoCuota.toFixed(2)}`,
+    icon: "info",
     confirmButtonText: 'Aceptar'
   })
-    return
-}
-let montoCuota = totalPrice / cuotas
-montoCuotaElement.textContent = `El monto total de cada cuota es de $${montoCuota.toFixed(2)}`})
+})
 let compraConfirmada = document.getElementById("confirmarCompraSi")
 compraConfirmada.addEventListener("click", function(){
   Swal.fire({
     title: 'Compra realizada',
     text: '¡Gracias por su compra!',
-    icon: 'succsess',
+    icon: 'success',
     confirmButtonText: 'Aceptar'
   })
 })

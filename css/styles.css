@@ -246,6 +246,11 @@ input[type=text] {
   background-color: #6b6c65;
   cursor: pointer;
 }
+.formHolder .processEnd div {
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+}
 
 footer {
   background-color: #6b6c65;

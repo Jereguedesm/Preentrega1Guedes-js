@@ -174,4 +174,11 @@ input[type="text"] {
             cursor: pointer;
         }
     }
+    .processEnd{
+        div{
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        }
+    }
 }
