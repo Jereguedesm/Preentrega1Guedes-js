@@ -136,3 +136,18 @@ function limpiarDatos() {
     confirmButtonText: 'Aceptar'
   })
 }
+
+function sorpresa() {
+  fetch('https://fakestoreapi.com/products/1')
+    .then(res => res.json())
+    .then(json => {
+      const { id, title, description } = json; // Desestructuración para obtener las propiedades del producto
+      // Mostrar el alert o Swal.fire con el id, título y descripción
+      Swal.fire({
+        title: 'Artículo sorpresa',
+        html: `<strong>ID:</strong> ${id}<br><strong>Título:</strong> ${title}<br><strong>Descripción:</strong> ${description}`,
+        icon: 'info',
+        confirmButtonText: 'Aceptar'
+      })
+    })
+}
