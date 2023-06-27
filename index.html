@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,32 +20,64 @@
     </div>
     <div>
         <ul class="ulHeader">
-            <li class="nsli">
-                Inicio
+            <li>
+                <a href="#inicio">Inicio</a>
             </li>
             <li>
-                <a href="./pages/carrito.html">Carrito</a>
+                <a href="#galeria">Galería</a>
             </li>
             <li>
-                <a href="./pages/usuario.html">Usuario</a>
+                <a href="#presupuestos">Presupuestos</a>
             </li>
-            <li>
-                <a href="./pages/extras.html">Extras</a>
-            </li>
+            
         </ul>
         
     </div>
 </header>
 <body>
     <main>
-        <section>
+        <section id="inicio">
             <p class="introduccion">
-                Bienvenidos a Matías Benítez - construcciones en PVC. Somos una empresa dedicada a la venta de materiales de construcción en PVC y a la realización de instalaciones en este tipo de material. Contamos con una amplia gama de productos de alta calidad para satisfacer las necesidades de nuestros clientes en sus proyectos de construcción. Nuestro compromiso es brindar un servicio de excelencia y asesoramiento profesional para asegurarnos de que tu proyecto sea un éxito.
+                Eleva el nivel de tus espacios con nuestros revestimientos de PVC de alta calidad, diseñados para brindar un aspecto premium. Descubre las ventajas de este material de vanguardia que supera tanto a la madera como a las placas de yeso tradicionales en términos de rendimiento y tecnología.
             </p>
         </section>
         <section>
+            <hr class="hDivisor">
+        </section>
+        <section class="propertiesUl introduccion">
+            <ul>
+                <li>
+                    Diseño y estética únicos
+                </li>
+                <li>
+                    Calidad de nivel internacional
+                </li>
+                <li>
+                    No requiere mantenimiento
+                </li>
+                <li>
+                    Resistente a la humedad y hongos
+                </li>
+                <li>
+                    Fácilmente lavable
+                </li>
+                <li>
+                    Ignífugo
+                </li>
+                <li>
+                    Sencillo de colocar
+                </li>
+                <li>
+                    Aislación térmica, acústica y eléctrica
+                </li>
+            </ul>
+        </section>
+        <section>
+            <hr class="hDivisor">
+        </section>
+        <section id="galeria">
             <div>
-                <h4 class="antesDespues">Antes/Después</h4>
+                <h4 class="antesDespues">Algunas muestras de nuestro trabajo:</h4>
             </div>
             <div class="imgHolder" id="#top">
                 <img src="./assets/img/techoUnoA.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
@@ -55,10 +87,98 @@
                 <img src="./assets/img/techoDosA.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
                 <img src="./assets/img/techoDosB.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
             </div>
+            <div class="imgHolder" id="#top">
+                <img src="./assets/img/tf1.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
+                <img src="./assets/img/tl1.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
+            </div>
+            <div class="imgHolder" id="#top">
+                <img src="./assets/img/tf2.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
+                <img src="./assets/img/tl2.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
+            </div>
+            <div class="imgHolder" id="#top">
+                <img src="./assets/img/tf3.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
+                <img src="./assets/img/tl3.jpeg" alt="Imagen de nuestro trabajo" class="muestraTrabajo">
+            </div>
+        </section>
+        <section>
+            <hr class="hDivisor">
+        </section>
+        <!--
+        <section id="calculadora">
+            <div class="cart">
+                <div class="item">
+                  <h3>Machimbres de PVC</h3>
+                  <p>Precio: $400</p>
+                  <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">-</button>
+                    <input type="text" name="name" value="0">
+                    <button class="plus-btn" type="button" name="button">+</button>
+                  </div>
+                </div>
+                <div class="item">
+                  <h3>Durlock </h3>
+                  <p>Precio: $3000</p>
+                  <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">-</button>
+                    <input type="text" name="name" value="0">
+                    <button class="plus-btn" type="button" name="button">+</button>
+                  </div>
+                </div>
+                <div class="item">
+                  <h3>Cielorrasos </h3>
+                  <p>Precio: $1000</p>
+                  <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">-</button>
+                    <input type="text" name="name" value="0">
+                    <button class="plus-btn" type="button" name="button">+</button>
+                  </div>
+                </div>
+                <div class="item">
+                  <h3>Estructuras de hierro </h3>
+                  <p>Precio: $1500</p>
+                  <div class="quantity">
+                    <button class="minus-btn" type="button" name="button">-</button>
+                    <input type="text" name="name" value="0">
+                    <button class="plus-btn" type="button" name="button">+</button>
+                  </div>
+                </div>
+                <div class="item">
+                    <h3>Tabiques divisorios </h3>
+                    <p>Precio: $2500</p>
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">-</button>
+                      <input type="text" name="name" value="0">
+                      <button class="plus-btn" type="button" name="button">+</button>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <h3>Taparrollos y cajones </h3>
+                    <p>Precio: $1950</p>
+                    <div class="quantity">
+                      <button class="minus-btn" type="button" name="button">-</button>
+                      <input type="text" name="name" value="0">
+                      <button class="plus-btn" type="button" name="button">+</button>
+                    </div>
+                  </div>
+              </div>
+              <div class="cart">
+                <div class="total">
+                  <h3>Total: </h3>
+                  <p id="total-price">$0</p>
+                </div>
+              </div>
+        </section>
+        -->
+        <div id="presupuestos" class="introduccion presupuesto">
+            <p>¡Pedí tu presupuesto sin cargo vía <a href="https://www.instagram.com/construcciones_en_pvc_/" target="_blank" rel="noopener" class="ig" style="color: #dd2a7b;">Instagram</a> o mandanos un mensaje a Whatsapp: 1126872907!</p>
+        </div>
+        <section>
+            <hr class="hDivisor">
         </section>
     </main>
 </body>
 <footer>
+    <!--
     <div class="social-list redes-container">
         <ul class="ul-redes">
             <li>
@@ -81,6 +201,7 @@
             </li>
         </ul>
     </div>
+-->
     <div class="author">
         <p>Todos los derechos reservados®</p>
         <p>Creación de la página: <a href="https://www.instagram.com/jereguedesm/" target="_blank" class="personal">@jereguedesm</a> / 1133290716 / jeremiasguedes04@gmail.com</p>

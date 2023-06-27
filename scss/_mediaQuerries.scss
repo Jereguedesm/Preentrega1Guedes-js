@@ -96,11 +96,11 @@
         }
     }
     .introduccion{
-        font-size: 2rem;
+        font-size: 1.9rem;
         width: 60%;
         margin: 15px auto;
         padding: 7px;
-        border-radius: 20px;
+        border-radius: 5px;
         background-color: $background-header;
     }
     .antesDespues{
@@ -112,6 +112,13 @@
         &:hover{
             transform: scale(1.05);
             cursor: pointer;
+        }
+    }
+    .propertiesUl{
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(4, 1fr);
         }
     }
 }
