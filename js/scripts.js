@@ -49,3 +49,25 @@ function updateTotal() {
     let totalPriceElement = document.querySelector("#total-price")
     totalPriceElement.textContent = "$" + totalPrice
 }
+
+
+
+ // Agrega event listeners a los enlaces
+ let links = document.querySelectorAll('.ulHeader a');
+ links.forEach(function(link) {
+     link.addEventListener('click', function(e) {
+         e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+         
+         // Obtiene el elemento de destino
+         let target = document.querySelector(this.getAttribute('href'));
+         
+         // Opciones de desplazamiento suave
+         let options = {
+             behavior: 'smooth', // Desplazamiento suave
+             block: 'start' // Alinea el elemento al inicio de la ventana
+         };
+         
+         // Realiza el desplazamiento suave
+         target.scrollIntoView(options);
+     });
+ });
