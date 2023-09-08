@@ -43,7 +43,7 @@ header div ul {
   justify-content: space-between;
 }
 header div ul li {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   list-style-type: none;
   margin: 40px auto;
   transition: transform 0.2s ease-out;
@@ -63,6 +63,10 @@ header div ul li a {
 .ulHeader {
   display: flex;
   flex-direction: row;
+}
+
+.selected {
+  text-decoration: underline 2px solid #9e6f31;
 }
 
 main {
@@ -87,18 +91,18 @@ section .listaMateriales li {
   font-size: 2rem;
 }
 
-.calculadoraPresupuestos {
-  font-size: 2.4rem;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: #e7cfb0;
-  margin: 100px auto 0 auto;
-  border: none;
-}
-.calculadoraPresupuestos:hover {
-  transform: scale(1.02);
-}
-
+/*
+.calculadoraPresupuestos{
+    font-size: 2.4rem;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: $background-header;
+    margin: 100px auto 0 auto;
+    border: none;
+    &:hover{
+        transform: scale(1.02);
+    }
+}*/
 .catalogo {
   display: flex;
   flex-direction: column;
@@ -123,15 +127,8 @@ section .listaMateriales li {
   padding: 3px 5px;
 }
 
-.muestraTrabajoContainer {
-  width: 100vw;
-}
-.muestraTrabajoContainer .muestraTrabajo {
-  /*
-  width: 100vw;
-  height: 320px;
-  */
-  margin: 10px 0;
+.muestraTrabajo {
+  margin: 10px 5px;
   border-radius: 5px;
   display: grid;
   grid-template-columns: 1fr;
@@ -139,7 +136,7 @@ section .listaMateriales li {
 }
 
 .introduccion {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   text-align: justify;
   margin: 4px 10px;
   padding: 5px;
@@ -165,104 +162,102 @@ p {
   margin: 7px;
 }
 
-.cart {
-  display: flex;
-  flex-direction: column;
+/*.cart {
+    display: flex;
+    flex-direction: column;
 }
-
 .item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .quantity {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
-input[type=text] {
-  width: 30px;
-  text-align: center;
-  border: none;
-  font-size: 2rem;
-  font-weight: bold;
+input[type="text"] {
+    width: 30px;
+    text-align: center;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .minus-btn, .plus-btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: none;
-  background-color: #6b6c65;
-  font-size: 2.2rem;
-  font-weight: bold;
-  cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: $background-footer;
+    font-size: 2.2rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .plus-btn {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 .minus-btn {
-  margin-right: 10px;
+    margin-right: 10px;
 }
 
 .plus-btn:hover,
 .minus-btn:hover {
-  background-color: #e6e6e6;
+    background-color: #e6e6e6;
 }
-
-#confirmarCompra {
-  font-size: 2rem;
-  margin: 10px;
-  padding: 3px;
-  background-color: #e7cfb0;
-  border-radius: 10px;
-  border: none;
+#confirmarCompra{
+    font-size: 2rem;
+    margin: 10px;
+    padding: 3px;
+    background-color: $background-header;
+    border-radius: 10px;
+    border: none;
 }
-
-.formHolder {
-  background-color: #e7cfb0;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-}
-.formHolder label {
-  font-size: 2rem;
-  padding: 3px;
-  margin: 7px;
-  margin-bottom: 0px;
-}
-.formHolder input {
-  font-size: 2rem;
-  padding: 3px;
-  margin: 7px;
-  width: 20%;
-  border: solid #000000 1px;
-  border-radius: 5px;
-}
-.formHolder button {
-  font-size: 2rem;
-  padding: 3px;
-  margin: 7px;
-  width: 15%;
-  border: solid #000000 1px;
-  border-radius: 5px;
-}
-.formHolder button:hover {
-  transform: scale(1.01);
-  background-color: #6b6c65;
-  cursor: pointer;
-}
-.formHolder .processEnd div {
-  display: flex;
-  flex-direction: column;
-  font-size: 2rem;
-}
-
+.formHolder{
+    background-color: $background-header;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    label{
+        font-size: 2rem;
+        padding: 3px;
+        margin: 7px;
+        margin-bottom: 0px;
+    }
+    input{
+        font-size: 2rem;
+        padding: 3px;
+        margin: 7px;
+        width: 20%;
+        border: solid #000000 1px;
+        border-radius: 5px;
+    }
+    button{
+        font-size: 2rem;
+        padding: 3px;
+        margin: 7px;
+        width: 15%;
+        border: solid #000000 1px;
+        border-radius: 5px;
+        &:hover{
+            transform: scale(1.01);
+            background-color: $background-footer;
+            cursor: pointer;
+        }
+    }
+    .processEnd{
+        div{
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        }
+    }
+}*/
 .hDivisor {
   border-top: 1px solid #6b6c65;
   top: 50%;
@@ -305,42 +300,49 @@ input[type=text] {
   color: #43d854;
 }
 
-.carrousel {
-  width: 100%;
-}
-.carrousel .conteCarrousel {
-  width: 100%;
-  height: 250;
-  overflow: hidden;
-}
-.carrousel .conteCarrousel .itemCarrousel {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-.carrousel .conteCarrousel .itemCarrousel .itemCarrouselTarjeta {
-  width: 100%;
-  height: 100%;
-}
-.carrousel .conteCarrousel .itemCarrousel .itemCarrouselArrows {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  color: #ffffff;
-}
-.carrousel .conteCarrousel .itemCarrousel .itemCarrouselArrows i :hover {
-  cursor: pointer;
-}
+/*
+.carrousel{
+    width: 100%;
+    padding: 10px;
+    .conteCarrousel{
+    width: 100%;
+    height: 250;
+    overflow: hidden;
+    .itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
 
+
+    .itemCarrouselTarjeta{
+        width: 100%;
+        height: 100%;
+    }
+    .itemCarrouselArrows{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px; 
+        color: #ffffff;
+
+        i{
+            :hover{
+                cursor: pointer;
+            }
+        }
+    }
+    }
+    }
+}
+*/
 footer {
   background-color: #6b6c65;
   margin-top: 5px;

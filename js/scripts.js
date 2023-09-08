@@ -77,7 +77,7 @@ links.forEach(function(link) {
 
 
 
-
+/*
 document.addEventListener("DOMContentLoaded", function() {
     let currentIndex = 0;
     const items = document.querySelectorAll(".itemCarrousel");
@@ -94,9 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function startCarousel() {
-        setInterval(nextItem, 3000); // Cambia de imagen cada 3 segundos (3000 milisegundos)
-    }
+        setInterval(nextItem, 3000);
 
     startCarousel()
 });
-
+*/

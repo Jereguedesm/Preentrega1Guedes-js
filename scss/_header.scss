@@ -22,7 +22,7 @@ header{
                 flex-direction: row;
                 justify-content: space-between;
                 li{
-                    font-size: 1.7rem;
+                    font-size: 1.9rem;
                     list-style-type: none;
                     margin: 40px auto;
                     transition: transform 0.2s ease-out;
@@ -33,6 +33,7 @@ header{
                         text-decoration: none;
                         color: #000000;
                         padding: 3px;
+                        
                     }
                 }
             }
@@ -44,4 +45,7 @@ header{
 .ulHeader{
     display: flex;
     flex-direction: row;
+}
+.selected{
+    text-decoration: underline 2px solid $underline-header;
 }
