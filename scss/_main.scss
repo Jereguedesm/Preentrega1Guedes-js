@@ -59,8 +59,10 @@ section{
     }
 }
 .muestraTrabajo{
+    /*
     width: 100vw;
     height: 320px;
+    */
     margin: 10px 0;
     border-radius: 5px;
 }
@@ -68,6 +70,8 @@ section{
     font-size: 1.6rem;
     text-align: justify;
     margin: 4px 10px;
+    padding: 5px;
+    background-color: $background-header;
 
 }
 .antesDespues{
@@ -218,4 +222,7 @@ input[type="text"] {
 }
 #ig{
     color: #dd2a7b;
+}
+#wsp{
+    color: #43d854;
 }

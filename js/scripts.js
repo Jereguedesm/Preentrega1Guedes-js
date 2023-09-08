@@ -52,22 +52,25 @@ function updateTotal() {
 
 
 
- // Agrega event listeners a los enlaces
- let links = document.querySelectorAll('.ulHeader a');
- links.forEach(function(link) {
-     link.addEventListener('click', function(e) {
-         e.preventDefault(); // Evita el comportamiento predeterminado del enlace
-         
-         // Obtiene el elemento de destino
-         let target = document.querySelector(this.getAttribute('href'));
-         
-         // Opciones de desplazamiento suave
-         let options = {
-             behavior: 'smooth', // Desplazamiento suave
-             block: 'start' // Alinea el elemento al inicio de la ventana
-         };
-         
-         // Realiza el desplazamiento suave
-         target.scrollIntoView(options);
-     });
- });
+let links = document.querySelectorAll('.ulHeader a');
+
+links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+        let href = this.getAttribute('href');
+        
+        if (href.startsWith('#')) {
+            // Si el enlace apunta a una ID interna
+            let target = document.querySelector(href);
+            let options = {
+                behavior: 'smooth',
+                block: 'start'
+            };
+            target.scrollIntoView(options);
+        } else {
+            // Si el enlace apunta a una página externa
+            window.location.href = href;
+        }
+    });
+});
