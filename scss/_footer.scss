@@ -23,6 +23,9 @@ footer{
         width: 60px;
         font-size: 3rem;
         border-radius: 5px;
+        &:visited {
+            color: #ffffff;
+        }          
         img{
             width: 30px;
         }
