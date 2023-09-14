@@ -159,12 +159,6 @@ p {
   margin: 20px 60px 20px 60px;
 }
 
-.hDivisor2 {
-  border-top: 1px solid #6b6c65;
-  top: 50%;
-  margin: 20px 60px 20px 60px;
-}
-
 .propertiesUl {
   background-color: #e7cfb0;
 }
@@ -258,6 +252,9 @@ footer {
   color: #ffffff;
   margin: 10px;
 }
+.author p {
+  text-align: center;
+}
 
 .ul-redes {
   display: grid;
@@ -271,6 +268,7 @@ footer {
   background-color: #333;
   padding: 3px;
   border-radius: 5px;
+  color: #ffffff;
 }
 .personal:visited {
   text-decoration: none;
