@@ -19,7 +19,7 @@
         }
     }
     main{
-        margin-top: 120px;
+        margin-top: 200px;
         section{
             div{
                 display: flex;
@@ -105,7 +105,7 @@
     }
     .antesDespues{
         font-size: 3rem;
-        margin: 15px;
+        margin: 15px 15px 45px 15px;
         justify-self: center;
     }
     #confirmarCompra{
@@ -120,5 +120,9 @@
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(4, 1fr);
         }
+    }
+    .hDivisor{
+        width: 50vw;
+        margin: 60px auto;
     }
 }

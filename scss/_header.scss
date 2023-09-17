@@ -6,6 +6,7 @@ header{
     display: flex;
     flex-direction: column;
     height: fit-content;
+    z-index: 2;
         div{
             h1{
                 font-size: 4rem;
@@ -27,8 +28,8 @@ header{
                     margin: 40px auto;
                     transition: transform 0.2s ease-out;
                     padding: 3px;
+                    width: -moz-fit-content;
                     width: fit-content;
-                    
                     a{
                         text-decoration: none;
                         color: #000000;
@@ -39,13 +40,18 @@ header{
             }
         }
 }
-.nsli{
-    text-decoration: underline 2px #804000;
-}
+.nsli {
+    text-decoration-line: underline;
+    text-decoration-color: #804000;
+    text-decoration-thickness: 2px;
+}  
 .ulHeader{
     display: flex;
     flex-direction: row;
 }
 .selected{
-    text-decoration: underline 2px solid $underline-header;
+    //text-decoration: underline 2px solid $underline-header;
+    text-decoration-color: $underline-header;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px solid;
 }

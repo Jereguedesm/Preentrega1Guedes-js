@@ -26,6 +26,7 @@ header {
   display: flex;
   flex-direction: column;
   height: fit-content;
+  z-index: 2;
 }
 header div h1 {
   font-size: 4rem;
@@ -48,6 +49,7 @@ header div ul li {
   margin: 40px auto;
   transition: transform 0.2s ease-out;
   padding: 3px;
+  width: -moz-fit-content;
   width: fit-content;
 }
 header div ul li a {
@@ -57,7 +59,9 @@ header div ul li a {
 }
 
 .nsli {
-  text-decoration: underline 2px #804000;
+  text-decoration-line: underline;
+  text-decoration-color: #804000;
+  text-decoration-thickness: 2px;
 }
 
 .ulHeader {
@@ -66,7 +70,9 @@ header div ul li a {
 }
 
 .selected {
-  text-decoration: underline 2px solid #9e6f31;
+  text-decoration-color: #9e6f31;
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px solid;
 }
 
 main {
@@ -132,10 +138,13 @@ section .listaMateriales li {
   margin: 4px 10px;
   padding: 5px;
   background-color: #e7cfb0;
+  /*background-image: url('../assets/img/backgroundPVC3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;*/
 }
 
 .antesDespues {
-  margin: auto;
+  margin: 50px auto 15px auto;
   font-size: 2rem;
 }
 
@@ -161,6 +170,9 @@ p {
 
 .propertiesUl {
   background-color: #e7cfb0;
+  /*background-image: url('../assets/img/backgroundPVC3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;*/
 }
 .propertiesUl ul {
   display: flex;
@@ -179,6 +191,9 @@ p {
   justify-content: space-evenly;
   align-content: center;
   text-align: center;
+  /*background-image: url('../assets/img/backgroundPVC2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;*/
 }
 .presupuesto p a {
   color: #000000;
@@ -194,6 +209,25 @@ p {
 
 #wsp {
   color: #43d854;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+.muestraTrabajo {
+  view-timeline-name: --image;
+  view-timeline-axis: block;
+  animation-timeline: --image;
+  animation-name: show;
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }
 
 footer {
@@ -294,7 +328,7 @@ footer {
     border-radius: 7px;
   }
   main {
-    margin-top: 120px;
+    margin-top: 200px;
   }
   main section div {
     display: flex;
@@ -360,7 +394,7 @@ footer {
   }
   .antesDespues {
     font-size: 3rem;
-    margin: 15px;
+    margin: 15px 15px 45px 15px;
     justify-self: center;
   }
   #confirmarCompra:hover {
@@ -371,5 +405,9 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
+  }
+  .hDivisor {
+    width: 50vw;
+    margin: 60px auto;
   }
 }
