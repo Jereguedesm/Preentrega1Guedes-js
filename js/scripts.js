@@ -76,6 +76,28 @@ links.forEach(function(link) {
 });
 
 
+//Botón para revertir scroll
+document.addEventListener("DOMContentLoaded", function () {
+    let btnBackToTop = document.getElementById('btnBackToTop');
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+            btnBackToTop.style.display = 'block';
+        } else {
+            btnBackToTop.style.display = 'none';
+        }
+    });
+
+    btnBackToTop.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
+
+
+
 
 /*
 document.addEventListener("DOMContentLoaded", function() {

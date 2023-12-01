@@ -11,6 +11,23 @@ main{
             font-weight: 400;
         }
     }
+    #btnBackToTop {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 20px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 2rem;
+        border: none;
+        border-radius: 100%;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+    
 }
 section{
     .listaMateriales{
@@ -57,7 +74,9 @@ section{
         grid-template-columns: 1fr;
         grid-template-rows: auto;
     }
-
+#inicio{
+    margin-top: 50px;
+}
 .introduccion{
     font-size: 1.8rem;
     text-align: justify;

@@ -68,6 +68,9 @@ header div ul li a {
   display: flex;
   flex-direction: row;
 }
+.ulHeader li a {
+  font-size: 2.4rem;
+}
 
 .selected {
   text-decoration-color: #9e6f31;
@@ -88,6 +91,22 @@ main div h5 {
   font-size: 2rem;
   margin: 7px 3px 3px 5px;
   font-weight: 400;
+}
+main #btnBackToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 2rem;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+main #btnBackToTop:hover {
+  transform: scale(1.05);
 }
 
 section .listaMateriales {
@@ -130,6 +149,10 @@ section .listaMateriales li {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+}
+
+#inicio {
+  margin-top: 50px;
 }
 
 .introduccion {
